@@ -9,6 +9,7 @@ import cuthillMckee from 'cuthill-mckee';
  * @param {number} [options.factorCriterion = 0.001] - factor of the sum of absolute value of original data, to compute stop criterion
  * @param {array} [options.weights] - initial weights vector, default each point has the same weight
  * @param {number} [options.lambda = 100] - factor of weights matrix in -> [I + lambda D'D]z = x
+ * @returns {array} - list with baseline, corrected (original - baseline), iteration and error value.
  */
 function airPLS(yData, options = {}) {
   let {
